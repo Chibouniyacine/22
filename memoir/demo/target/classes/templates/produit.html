@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <title>Ajouter un produit</title>
+</head>
+<header>
+    <a th:href="@{/index}" class="logo"><span>T</span>rader</a>
+</header>
+<body>
+    <section class="menu">
+        <div>
+            <h2 class="titre-texte"><span>Ajouter</span> Un produit</h2>
+        </div>
+    </section>
+    <section>
+        <div>
+            <h2 class="titre-texte"><span>Vous</span>avez un compte deja</h2>
+        </div>
+        <form th:action="@{/api/v1/objects}" method="post" th:object="${product}">
+
+            <label>Nom </label>
+            <input type="text" th:field="*{name}"/>
+
+            <label >Photo</label>
+            <input type="file" th:field="*{photo}"/>
+
+            <div><button type="submit" >ajout</button> </div>
+        </form>
+    </section>
+</body>
+</html>

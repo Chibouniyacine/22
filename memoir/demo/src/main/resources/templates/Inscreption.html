@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel = "preconnect" href = "https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <title>Inscreption</title>
+    </head>
+    <header>
+        <a th:href="@{/index}" class="logo"><span>T</span>rader</a>
+    </header>
+    <body>
+        <section class="inscreption">
+                    <div>
+                        <h2 class="titre-texte"><span>I</span>nscreption </h2>
+                    </div>
+                    <form th:action="@{/Inscreption/save}" method="post" th:object="${user}">
+                        <div><label> name </label></div>
+                        <div><input type="text" th:field="*{name}"/></div>
+                        <div><label> password </label></div>
+                        <div><input  type="password" th:field="*{password}"/></div>
+                        <div><label> email </label></div>
+                        <div><input  type="email" th:field="*{email}"/></div>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                    </label>
+                        <div>
+                            <button type="submit" >save</button>
+                        </div>
+                    </form>
+                <section class="menu">
+                    <div>
+                        <h2 class="titre-texte"><span>Vous</span>avez un compte deja</h2>
+                    </div>
+                    <form th:action="@{/Inscreption/save1}" method="post" th:object="${user}">
+                        <div>
+                            <label> email </label>
+                        </div>
+                        <div>
+                            <input  type="email" th:field="*{email}"/>
+                        </div>
+                        <div>
+                            <label> password </label>
+                        </div>
+                        <div>
+                            <input  type="password" th:field="*{password}"/>
+                        </div>
+                        <div>
+                            <button type="submit" >login</button>
+                        </div>
+                    </form>
+                </section>
+        </section>
+    <script src="trader.js"></script>
+    </body>
+</html>

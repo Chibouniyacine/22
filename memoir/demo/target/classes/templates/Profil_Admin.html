@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thyme leaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <title>Admin</title>
+</head>
+<header>
+    <a th:href="@{/index}" class="logo"><span>T</span>rader</a>
+</header>
+<body>
+<h1> Bienvenu Admin</h1>
+<section class="banniere" id="banniere">
+    <div class="contenu">
+        <h2>Bienvenue Dans L'espace "échange d'objets" </h2>
+        <p>Echange Service est une plate-forme de mise en relation qui vise à favoriser l'échange et le service. Publiez des annonces !
+            Vendre, acheter, échanger vos biens et vos services sans commission avec les membres de la communauté !.</p>
+    </div>
+</section>
+<section class="menu">
+    <div>
+        <h2>suprimer un compte</h2>
+    </div>
+    <form th:action="@{/Inscreption/sup}" method="post" th:object="${user}">
+
+        <div>
+            <label> email </label>
+        </div>
+        <div>
+            <input  type="email" th:field="*{email}"/>
+        </div>
+        <div>
+            <label> password </label>
+        </div>
+        <div>
+            <input  type="password" th:field="*{password}"/>
+        </div>
+
+        <div>
+            <button type="submit" >login</button>
+        </div>
+    </form>
+</section>
+</body>
+</html>

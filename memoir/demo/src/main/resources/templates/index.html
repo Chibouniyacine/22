@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+    <html lang="en" xmlns:th="http://www.thyme leaf.org" >
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel = "preconnect" href = "https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <script src="trader.js"></script>
+        <title>Trader</title>
+    </head>
+    <header>
+        <a href="#" class="logo"><span>T</span>rader</a>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
+        <ul class="navbar">
+            <li><a href="#" onclick="toggleMenu();">Accueil</a></li>
+            <li><a th:href="@{/index/apropos}" onclick="toggleMenu();">A propos</a></li>
+            <li><a href="#menu" onclick="toggleMenu();">Objects</a></li>
+            <li><a th:href="@{/index/inscreption}" onclick="toggleMenu();">Inscreption</a></li>
+            <li><a th:href="@{/index/contact}" onclick="toggleMenu();">Contactez-nous</a></li>
+            <a th:href="@{/index/inscreption}" class="btn-reserve"onclick="toggleMenu();">Se connecter</a>
+        </ul>
+    </header>
+<body>
+    <section class="menu" id="menu">
+        <div class="titre">
+            <h2 class="titre-texte"><span>O</span>bjects</h2>
+            <p>Vous pouvez trouver des livres et plus. </p>
+        </div>
+        <div class="contenu">
+            <div class="box">
+                <div class="imbox">
+                    <img src="/images/book1.jpg" alt="images">
+                </div>
+                <div >
+                    <a th:href="@{/index/book1}" class="btn1"><h3>Resevoir</h3></a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imbox">
+                    <img src="/images/book2.jpg" alt="images">
+                </div>
+                <div>
+                    <a th:href="@{/index/book2}" class="btn1"><h3>Resevoir</h3></a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imbox">
+                    <img src="/images/book3.jpg" alt="images">
+                </div>
+                <div class="btn1">
+                    <h3>Resevoir</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imbox">
+                    <img th:src="@{/images/book4.jpg}" alt="images">
+                </div>
+                <div class="btn1">
+                    <h3>Resevoir</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imbox">
+                    <img src="/images/book5.jpg" alt="images">
+                </div>
+                <div class="btn1">
+                    <h3>Resevoir</h3>
+                </div>
+            </div>
+                <div class="box">
+                    <div class="imbox">
+                        <img src="/images/book6.jpg" alt="images">
+                    </div>
+                    <div class="btn1">
+                        <h3>Resevoir</h3>
+                    </div>
+                </div>
+            <div class="box">
+                <div class="imbox">
+                    <img src="/images/book7.jpg" alt="images">
+                </div>
+                <div class="btn1">
+                    <h3>Resevoir</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imbox">
+                    <img src="/images/book8.jpg" alt="images">
+                </div>
+                <div class="btn1">
+                    <h3>Resevoir</h3>
+                </div>
+            </div>
+        </div>
+    <div class="titre">
+        <a href="#" class="btn1">Voir Plus</a>
+    </div>
+</section>
+<section class="expert" id="expert">
+    <div class="titre">
+        <h2 class="titre-texte">Nos <span>C</span>ategories</h2>
+        <p>Les produits disponibles... </p>
+    </div>
+    <div class="contenu">
+        <div class="box">
+            <div class="imbox">
+                <img src="/images/books.jpg" alt="images">
+            </div>
+            <div class="text">
+                <h3><span>B</span>OOKS</h3>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="temoignage" id="temoignage">
+    <div class="titre blanc">
+        <h2 class="titre-texte">Que Disent Nos <span>C</span>lients</h2>
+        <p>Notes et avis. </p>
+    </div>
+    <div class="contenu">
+        <div class="box">
+            <div class="imbox">
+                <img src="/images/t1.jpeg" alt="images">
+            </div>
+            <div class="text">
+                <p> This book great.</p>
+                <h3>carl leroi</h3>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imbox">
+                <img src="/images/t2.jpg" alt="images">
+            </div>
+            <div class="text">
+                <p>ce site est vraimment facile pour l'utilisation .</p>
+                <h3>Franck leroi</h3>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imbox">
+                <img src="/images/t3.jpg" alt="images">
+            </div>
+            <div class="text">
+                <p>I like this books.</p>
+                <h3>jhon frank</h3>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="copyright">
+    <p> 2022 <a href="#">L3</a> Chibouni Yacine</p>
+</div>
+</body>
+</html>
